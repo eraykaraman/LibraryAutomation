@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Create Book";
+}
+
+
+
+@model Book
+
+<h1>Create Book</h1>
+<form method="post" asp-action="Create">
+    <div class="form-group">
+        <label asp-for="Name">Book Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="AuthorId">Author</label>
+        <select asp-for="AuthorId" asp-items="ViewBag.Authors" class="form-control">
+            <option value="">Select an Author</option>
+        </select>
+        <span asp-validation-for="AuthorId" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="Page">Page Count</label>
+        <input asp-for="Page" type="number" class="form-control" min="10" />
+        <span asp-validation-for="Page" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ImageURL">Book Image URL</label>
+        <input asp-for="ImageURL" class="form-control" />
+        <span asp-validation-for="ImageURL" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ReleaseDate">Release Date</label>
+        <input asp-for="ReleaseDate" class="form-control" type="date" />
+        <span asp-validation-for="ReleaseDate" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="UserId">User Id - Library Account</label>
+        <input asp-for="UserId" class="form-control" value="11223344-5566-7788-99AA-BBCCDDEEFF00" readonly />
+
+    </div>
+    <div class="form-group">
+        <input asp-for="IsAvailable" class="form-group" type="checkbox">
+        <label for="IsAvailable">Is Available</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Add</button>
+</form>

@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Create Author";
+}
+
+@model Author
+
+@{
+    var id = Guid.NewGuid();
+}
+
+<div class="container">
+    <h1>Create Author</h1>
+    <form method="post">
+        <div class="form-group" asp-action="Create">
+            <label asp-for="Id">Id</label>
+            <input asp-for="Id" class="form-control" value="@id" readonly />
+
+        </div>
+        <div class="form-group">
+            <label asp-for="Name">Name</label>
+            <input asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="LastName">Last Name</label>
+            <input asp-for="LastName" class="form-control" />
+            <span asp-validation-for="LastName" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary">Create</button>
+    </form>
+</div>
+

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Library </title>
+    <link rel="icon" type="image/x-icon" href="https://w7.pngwing.com/pngs/755/70/png-transparent-computer-icons-book-oise-library-book-angle-rectangle-logo-thumbnail.png" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/LibraryAutomation.Web.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3  bg-custom">
+            <div class="container-fluid">
+                <a class="navbar-brand text-white fw-bold text-custom " asp-area="" asp-controller="Home" asp-action="Index">Library</a>
+                <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Book" asp-action="Create">Create Book</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Author" asp-action="Index">Authors</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Author" asp-action="Create">Create Author</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Rent" asp-action="Index">Rents</a>
+
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="About">About</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2023 - Library - Created by <a href="https://www.github.com/eraykaraman">eraykaraman</a>
+        </div>
+    </footer>
+    <style>
+        .bg-custom {
+            background-color: #1F305E;
+        }
+
+        .text-custom {
+            font-size: 2rem;
+        }
+
+
+        .slider-container {
+            max-width: 60%;
+            max-height: 30%;
+            margin: 0 auto;
+            text-align: center;
+            padding-top: 1rem;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    </style>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="/_framework/aspnetcore-browser-refresh.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.slider').slick({
+                autoplay: true, // Otomatik oynatma
+                autoplaySpeed: 5000, // Her slaytın gösterim süresi (5 saniye)
+                dots: true, // Navigasyon noktalarını kapat
+                infinite: true, // Sonsuz döngü
+                slidesToShow: 1, // Görünen slayt sayısı
+                slidesToScroll: 1, // Kaydırma adımı
+                fade: true, // Soft geçiş etkisi
+            });
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

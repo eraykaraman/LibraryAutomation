@@ -1,0 +1,46 @@
+﻿@model List<Book>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Books</h1>
+    <p>You can view and rent available and unavailable books from here.</p>
+</div>
+<div class="row">
+    @foreach (var book in Model)
+    {
+        <div class="col-md-3 mb-2">
+            <div class="card">
+                <img src="@book.ImageURL" class="card-img-top mx-auto" alt="Book Image" style="width: 200px; height: 300px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@book.Name</h5>
+                    <p class="card-text">Author: @book.Author.Name @book.Author.LastName</p>
+                    <p class="card-text">Page: @book.Page</p>
+                    <p class="card-text">Publication Year: @book.ReleaseDate.Year</p>
+                    @if (book.IsAvailable == true)
+                    {
+                        <p class="card-text">Is Available: <b class="text-success">Available</b></p>
+                        <a asp-action="RentPage" asp-controller="Rent" asp-route-bookId="@book.Id" method="get" class="rent-form">
+                            <button type="submit" class="btn btn-success">Rentable</button>
+                        </a>
+                    }
+                    else
+                    {
+                        <p class="card-text">Is Available: <b class="text-danger">Not Available</b></p>
+                        <button type="submit" class="btn btn-danger">Not Rentable</button>
+                    }
+
+
+
+
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
