@@ -8,7 +8,7 @@ namespace LibraryAutomation.Web.Controllers
         private readonly IExceptionService _exceptionService;
         private readonly IBookService _bookService;
 
-        public HomeController(ILogger<HomeController> logger, IBookService bookService, IExceptionService exceptionService)
+        public HomeController(IBookService bookService, IExceptionService exceptionService)
         {
 
             _bookService = bookService;
@@ -24,24 +24,6 @@ namespace LibraryAutomation.Web.Controllers
             }
             catch (Exception ex)
             {
-
-                _exceptionService.Message = ex.Message;
-                await _exceptionService.LogExceptionAsync();
-                return Content("Something went wrong. We'll be fixing it."); ;
-            }
-        }
-
-
-
-        public async Task<IActionResult> AboutAsync()
-        {
-            try
-            {
-                return View();
-            }
-            catch (Exception ex)
-            {
-
 
                 _exceptionService.Message = ex.Message;
                 await _exceptionService.LogExceptionAsync();

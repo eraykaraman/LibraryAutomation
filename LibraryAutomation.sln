@@ -5,13 +5,13 @@ VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAutomation.Web", "LibraryAutomation.Web\LibraryAutomation.Web.csproj", "{B2143F11-1D05-4496-A31C-43E262A5ED94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryAutomation.Entity", "LibraryAutomation.Entity\LibraryAutomation.Entity.csproj", "{7CE7E8DB-8941-4AF9-8642-36C7F407938F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAutomation.Entity", "LibraryAutomation.Entity\LibraryAutomation.Entity.csproj", "{7CE7E8DB-8941-4AF9-8642-36C7F407938F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryAutomation.Data", "LibraryAutomation.Data\LibraryAutomation.Data.csproj", "{0158D5B6-2C76-48AE-BD5F-37E1FF5F4529}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAutomation.Data", "LibraryAutomation.Data\LibraryAutomation.Data.csproj", "{0158D5B6-2C76-48AE-BD5F-37E1FF5F4529}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryAutomaiton.Service", "LibraryAutomaiton.Service\LibraryAutomaiton.Service.csproj", "{1030BD5F-56E0-4DC2-803B-FAEC1491975F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAutomaiton.Service", "LibraryAutomaiton.Service\LibraryAutomaiton.Service.csproj", "{1030BD5F-56E0-4DC2-803B-FAEC1491975F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryAutomation.Core", "LibraryAutomation.Core\LibraryAutomation.Core.csproj", "{D323E53A-19EF-47F2-AD9F-D3EFAF4158A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryAutomation.Core", "LibraryAutomation.Core\LibraryAutomation.Core.csproj", "{D323E53A-19EF-47F2-AD9F-D3EFAF4158A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

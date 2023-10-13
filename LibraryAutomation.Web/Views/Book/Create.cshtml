@@ -10,29 +10,29 @@
 <form method="post" asp-action="Create">
     <div class="form-group">
         <label asp-for="Name">Book Name</label>
-        <input asp-for="Name" class="form-control" />
+        <input asp-for="Name" class="form-control" required />
         <span asp-validation-for="Name" class="text-danger"></span>
     </div>
     <div class="form-group">
-        <label asp-for="AuthorId">Author</label>
-        <select asp-for="AuthorId" asp-items="ViewBag.Authors" class="form-control">
+        <label asp-for="AuthorId">Author <p class="text-muted">Don't forget to add the author before adding the book</p></label>
+        <select asp-for="AuthorId" asp-items="ViewBag.Authors" class="form-control" required>
             <option value="">Select an Author</option>
         </select>
         <span asp-validation-for="AuthorId" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="Page">Page Count</label>
-        <input asp-for="Page" type="number" class="form-control" min="10" />
+        <input asp-for="Page" type="number" class="form-control" min="10"  required/>
         <span asp-validation-for="Page" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ImageURL">Book Image URL</label>
-        <input asp-for="ImageURL" class="form-control" />
+        <input asp-for="ImageURL" class="form-control" required />
         <span asp-validation-for="ImageURL" class="text-danger"></span>
     </div>
     <div class="form-group">
         <label asp-for="ReleaseDate">Release Date</label>
-        <input asp-for="ReleaseDate" class="form-control" type="date" />
+        <input asp-for="ReleaseDate" class="form-control" type="date" required />
         <span asp-validation-for="ReleaseDate" class="text-danger"></span>
     </div>
     <div class="form-group">
@@ -41,8 +41,8 @@
 
     </div>
     <div class="form-group">
-        <input asp-for="IsAvailable" class="form-group" type="checkbox">
-        <label for="IsAvailable">Is Available</label>
+        <input asp-for="IsAvailable" class="form-group" type="checkbox" >
+        <label for="IsAvailable">Is Available <p class="text-muted">If this book is available for rent, please mark it.</p></label>
     </div>
     <button type="submit" class="btn btn-primary">Add</button>
 </form>

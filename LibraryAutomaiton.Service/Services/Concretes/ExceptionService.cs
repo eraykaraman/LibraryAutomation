@@ -22,7 +22,7 @@ namespace LibraryAutomaiton.Service.Services.Concretes
         public async Task LogExceptionAsync()
         {
             // Logging process, including error message, type, and other necessary information
-            string logFilePath = "error_log.txt"; // Path to the log file
+            string logFilePath = "Logs\\error_log.txt"; // Path to the log file
 
             using (StreamWriter sw = new StreamWriter(logFilePath, true))
             {
