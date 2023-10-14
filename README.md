@@ -1,5 +1,5 @@
 # LibraryAutomation
-The main goal of this project is to create a ready-to-use book rental tracking system for the library. Clean code, SOLID principles, openness to change and improvement are just some of the things I focused on while creating the project. The application is designed as fully responsive. And here are some of the features you can see when analyzing this project
+The main goal of this project is to create a ready-to-use book rental tracking system for the library. Clean code, SOLID principles, openness to change and improvement are just some of the things I focused on while creating the project. The application is designed as fully responsive. And here are some of the features you can see when reviweing this project
 
 * N-Tier Architecture
 * Repository Pattern
@@ -14,7 +14,7 @@ The main goal of this project is to create a ready-to-use book rental tracking s
 * MSSQL (On Local With SQL Server Management Studio)
 
 ### How it works?
-First of all, the application is built on ASP.NET CORE 6 MVC, that is, it works in MVC (Model - View - Controller) logic. It uses Entity Framework Core 6 as ORM tool. 
+First of all, the application is built on ASP.NET CORE 6 MVC. That is, it works in MVC (Model - View - Controller) logic. It uses Entity Framework Core 6 as ORM tool. 
 When you log in to the application, a clean and simple page welcomes you. You can navigate between pages with the navbar at the top, create books, authors and see the current rental status.
 
 If you want to create a book, you can access the creation page from the navbar and create it easily. But remember that before you can create your book, you must first create the author of your book. Books and Authors are in a relationship. If your author is not available in the selection box, you can easily create your author by using the "Create Author" button in the navbar.
@@ -32,8 +32,8 @@ Custom Exception Handler logs any error that occurs in the application instantly
 
 ### To run the application
 First of all, here are the things that should be installed on your machine
-*NET 8
-*MSSQL - SQL Server Management Studio (Recommended)  Or a SQL 2019 container that you install on docker
+* NET 6
+* MSSQL - SQL Server Management Studio (Recommended)  Or a SQL 2019 container that you install on docker
 
 Then add your connection string to the application.json file in LibraryAutomation.Web. This will connect your database to the application. There is some data in it for you to test the application. To include them, you can run the "onModelCreating" method under the "LibraryDbContext" class under the "Data" layer. 
 Then you should do the necessary migration operations. These are respectively
