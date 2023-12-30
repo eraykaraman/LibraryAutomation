@@ -32,7 +32,7 @@ Custom Exception Handler logs any error that occurs in the application instantly
 
 ### To run the application
 First of all, here are the things that should be installed on your machine
-* NET 6
+* .NET 6
 * MSSQL - SQL Server Management Studio (Recommended)  Or a SQL 2019 container that you install on docker
 
 Then add your connection string to the application.json file in LibraryAutomation.Web. This will connect your database to the application. There is some data in it for you to test the application. To include them, you can run the "onModelCreating" method under the "LibraryDbContext" class under the "Data" layer. 
